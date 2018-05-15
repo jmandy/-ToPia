@@ -1,5 +1,6 @@
 package com.example.ellis.topia;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -41,7 +42,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.button_signup:
-
+                Intent signUpIntent = new Intent(getApplicationContext(), SignupActivity.class);
+                startActivityForResult(signUpIntent, 1);
                 break;
             case R.id.button_login:
 
